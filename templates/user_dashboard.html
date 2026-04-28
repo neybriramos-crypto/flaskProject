@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center">
+    <h2 class="text-2xl font-bold mb-4">¡Hola, {{ current_user.username }}!</h2>
+    <p class="mb-6 text-gray-600">No tienes permisos de admin, pero aquí tienes un meme:</p>
+    <div class="flex justify-center">
+        <img src="{{ url_for('static', filename='img/5154549986518305982.jpg') }}" alt="Meme de programación" class="rounded-lg shadow-lg max-w-sm">
+    </div>
+</div>
+{% endblock %}

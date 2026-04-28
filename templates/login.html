@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="max-w-md mx-auto bg-white p-8 rounded shadow">
+    <h2 class="text-2xl mb-4 font-bold">Iniciar Sesión</h2>
+    <form method="POST">
+        <input type="email" name="email" placeholder="Email" class="w-full mb-4 p-2 border rounded" required>
+        <input type="password" name="password" placeholder="Contraseña" class="w-full mb-4 p-2 border rounded" required>
+        <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded">Entrar</button>
+    </form>
+    <p class="mt-4 text-sm">¿No tienes cuenta? <a href="{{ url_for('register') }}" class="text-blue-500">Regístrate</a></p>
+</div>
+{% endblock %}
